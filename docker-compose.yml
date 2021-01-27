@@ -5,10 +5,11 @@ services:
       - "3000:3000"
     environment:
       - STEIN_MONGO_URL=mongodb://mongo:27017/stein
-      - STEIN_CLIENT_ID=YOUR_ID
-      - STEIN_CLIENT_SECRET=YOUR_SECRET
-      - STEIN_CALLBACK_URL=YOUR_CALLBACK_URL
+      - STEIN_CLIENT_ID=
+      - STEIN_CLIENT_SECRET=
+      - STEIN_CALLBACK_URL=
   mongo:
     image: mongo
     restart: always
-    volumes: /data/db
+    volumes:
+      - /data/db
